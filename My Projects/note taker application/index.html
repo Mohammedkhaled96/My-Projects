@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="note taker application is based on html, css and javascript. this application is used local storage in your prouser by javascript to store your notes and you can export your notes to excel or pdf">
+    <meta name="keywords" content="portfolio, Website, about, Sharepoint Developer, Technology Information Developer, programming, developint, Mohammed Khaled, Web Develope, note, nota, note taker, notion, taking notes, save note, capture my notes">
+    <meta name="author" content="Mohammed Khaled, mohammed.khaled@mohammedkhaled.com">
+    <meta name="og:title" content="Nota">
+    <meta name="og:description" content="Note taker">
+    <meta property="og:image" content="https://mohammedkhaled.com/wordpress/wp-content/uploads/2022/07/note.png">    
+    <meta name="og:type" content="nota application">
+    <meta name="og:email" content="mohammed.khaled@mohammedkhaled.com">
+    <meta name="og:phone_number" content="+201141226652">
+    <meta name="og:country-name" content="Egypt">
+        <title>NOTA</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <audio src="welcome.mp3" id="my_audio"></audio>
+    <h1>Capture your notes</h1>
+
+    <form id="add-form">
+      <input id="title" placeholder="Title">
+                                    <textarea name="Note" id="note" rows="4" placeholder="Type your note here."></textarea>
+<input id="date" type="date" /> 
+      <button type="submit">add</button>
+    </form>
+<hr/>
+    <table id="list-table">
+      <thead>
+        <th>
+          Title
+        </th>        
+        <th colspan="4">
+          Note
+        </th>
+<th colspan="2">
+Date and Time
+</th>
+      </thead>
+    </table>
+			<input type="button" value="export to Excel" onclick="exportToExcel('list-table')" />
+
+
+
+    <input type="button" onclick="generate()" value="Export To PDF" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

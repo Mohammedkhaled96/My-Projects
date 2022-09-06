@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+		<link rel="stylesheet" href="css/style.css">
+</head>
+	<body>
+<h1><script>  
+    var welcome;  
+    var date = new Date();  
+    var hour = date.getHours();  
+    var minute = date.getMinutes();  
+
+    if (minute < 10) {  
+      minute = "0" + minute;  
+    }  
+    if (hour < 12) {  
+      welcome = "Good morning";  
+    } else if (hour < 17) {  
+      welcome = "Good afternoon";  
+    } else {  
+      welcome = "Good evening";  
+    }  
+    document.write("<p>" + "<font color='red'>" + welcome + "</font>");  
+
+    </script></h1>
+
+<div id = "clockDisplay" clas = "clock" style="margin-bottom: 20px; margin-top: 5px;"></div>
+<script>
+	var mydate = new Date;
+	var year = mydate.getYear();
+	if(year<1000)
+	{
+		year+=1900;
+	}
+	var day = mydate.getDay();
+	var month = mydate.getMonth();
+	var daym = mydate.getDate();
+	var dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+	var monthArray = new Array("January","February","March","April","May","June","July","August","September","August","October","November","December");
+	var myClock = document.getElementById("clockDisplay") ;
+	myClock.textContent = " " + dayArray[day] +","+ " " + daym + " " + monthArray[month] + " " + year;
+	document.getElementById('#clockDisplay').style.color="white";
+</script>
+<h3>CREATE ID</h1>
+		
+<form>
+				<input type="submit" value="Create ID" onclick="play(); createID();">
+
+
+			</form>
+			<button id="hide" class="copy-button">
+				<i class="fa fa-clipboard" aria-hidden="true"></i>
+			</button>
+			<hr />
+</div>
+<div>
+<h3>Create Randum ID</h2>
+    <p><button onclick="playaudio();" id="generate">Create Randum ID</button></p>
+    <p>
+<span class="display-ID" id="output"></span>
+<a href="#" onclick="CopyToClipboard('output');return false;">Copy Randum ID</a>
+</p>				
+</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="script/script.js"></script>
+</body>
+</html>
+
