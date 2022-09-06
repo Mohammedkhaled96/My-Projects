@@ -1,0 +1,27 @@
+#toast-container > div {
+				opacity: 1 !important;
+			}
+			.toast-message {
+				font-family: sans-serif;
+			}
+			span.display-ID {
+				font-family: monospace;
+			}
+			span#display-ID {
+				font-family: monospace;
+			}
+
+			p.disclaimer{
+				font-family: sans-serif;
+			}
+			input[type=text] {
+				max-width: 70vw
+			}
+
+.hide{
+display: none;
+}
+
+#hide{
+display: none;
+}

@@ -1,0 +1,48 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato',sans-serif;
+	font-weight: 300;
+    color: #666;
+    background-color: #fff;
+}
+
+.contact-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+	display:block;
+    position:relative;
+    z-index:120;
+	overflow:hidden;
+}
+
+.boxed-grey {
+	background: #f9f9f9;
+	padding: 20px;
+}
+
+.form-group label {
+	display: block;
+	text-align: left;
+}
+
+textarea.form-control {
+	height: 182px;
+}
+
+.btn {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-family: Montserrat,sans-serif;
+	font-weight: 400;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+}
