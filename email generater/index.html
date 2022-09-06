@@ -1,0 +1,199 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="theme-color" content="#f2f2f2">
+    <meta name="msapplication-navbutton-color" content="#f2f2f2">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2">
+    <meta name="description" content="I am an Egyptian Web Developer and an information technology developer   Also, I have experience working with office365 applications such as online Sharepoint, Power automate, Power BI and the rest of office365 applications.">
+    <meta name="keywords" content="generator, Email Generator, data, data Generator, tempmail, TempMail, Fake email, fake, portfolio, Website, about, Sharepoint Developer, Technology Information Developer, programming, developint, Mohammed Khaled, Web Developer">
+    <meta name="author" content="Mohammed Khaled, moh.khaled96@gmail.com">
+    <meta name="og:title" content="Mohammed Khaled Web Application">
+    <meta name="og:description" content="Email Generator">
+    <meta property="og:image" content="https://mohammedkhaled.com/wordpress/wp-content/uploads/2021/12/PHOTO-2021-09-08-00-24-091.jpg">    
+    <meta name="og:type" content="Email Generator">
+    <meta name="og:email" content="moh.khaled96@gmail.com">
+    <meta name="og:phone_number" content="+201141226652">
+    <meta name="og:country-name" content="Egypt">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>TempMail</title>
+     <script src = "js/jquery.js" type = "text/javascript"></script>
+     <script src = "js/prettyPrint.js" type = "text/javascript"></script>
+     <script src = "js/faker.js" type = "text/javascript"></script>
+     <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+      <script>
+
+          $(document).ready(function(e){
+
+            // draws buttons / inputs for all faker methods
+            function drawButtons () {
+              $('#buttons').html('');
+
+              var str = '';
+
+              var moduleList = '<tr><td colspan="2"><ul>';
+
+              var modules = Object.keys(faker);
+              modules = modules.sort();
+              modules.forEach(function(module){
+                var ignore = ['locale', 'locales', 'localeFallback', 'definitions', 'fake'];
+                if (ignore.indexOf(module) !== -1) {
+                  return;
+                }
+                var moduleRow = '<tr><td colspan="2"" class="big"><a name="' + module + '"/>' + module + '</td></tr>';
+
+                moduleList += '<li><a href="#' + module + '">' + module + '</a></li>';
+
+                str += moduleRow;
+                
+                for (var method in faker[module]) {
+                  if (typeof faker[module][method] === "function") {
+                    // a function was found, create a button and input for it,
+                    // execute the value, and set it
+                    var inputID = "button_" + module + "_" + method;
+                    var strInput = '';
+                    // form inputs string concat
+                     var strButton = '\
+                      <tr>\
+                        <td align="right"><input class="fakerButton" type="button" value="' + module + "." + method +'" id="' + inputID + '"/></td>';
+
+                      // get the default value
+                      var val = '';
+                      try {
+                        val = faker[module][method]();
+                      } catch (err) {
+                      }
+
+                      // switch input type based on default string / object value being returned
+                      if (typeof val === "object") {
+                          strInput += '<td><textarea id="' + inputID + "_value" + '">' + JSON.stringify(val, true, 2) + '</textarea></td>\
+                        </tr>';
+                      } else {
+                          strInput += '<td><input size="100" id="' + inputID + "_value" + '" type="input" value="' + val + '"/></td>\
+                        </tr>';
+
+                      }
+                      str += (strButton + strInput)
+                  }
+                }
+              });
+              moduleList += '</ul></td></tr>';
+              str = moduleList + str;
+              $('#buttons').append(str);
+
+             $('.fakerButton').click(function(e){
+                var inputID = $(this).attr('id') + "_value";
+                var arr = inputID.split('_');
+                var module = arr[1];
+                var method = arr[2];
+                var val = '';
+                try {
+                  val = faker[module][method]();
+                } catch (err) {
+                  
+                }
+                if (typeof val === "object") {
+                  val = JSON.stringify(val, true, 2);
+                }
+                $('#' + inputID).attr('value', val)
+              });
+            }
+
+            drawButtons();
+   
+            var _locales = [];
+
+            for(var locale in faker.locales) {
+              _locales.push({ name: locale, title: faker.locales[locale].title})
+            }
+
+            _locales = _locales.sort(function(a, b){
+              if (a.title < b.title)
+                   return -1;
+                if (a.title > b.title)
+                  return 1;
+                return 0;
+            });
+            
+            _locales.forEach(function(item){
+              
+              $('.locale').append('<option value="' + item.name+ '">' + item.title + '</option>');
+            });
+
+            $('.locale').val("en");
+
+            $('.locale').change(function(e){
+              var locale = $(this).val();
+              faker.locale = locale;
+              drawButtons();
+              generateName();
+            });
+
+            function generateName () {
+
+              // make name contextual to username and email
+              var firstName = faker.name.firstName(),
+                  lastName = faker.name.lastName();
+
+              var dob = faker.date.past(50, new Date("Sat Sep 20 1992 21:35:02 GMT+0200 (CEST)"));
+              dob = dob.getFullYear() + "-" + (dob.getMonth()+1) + "-" + dob.getDate();  // First month is "1"
+              $('#inputName').attr("value", faker.name.findName(firstName, lastName));
+              // $('#inputGender').attr("value", faker.name.gender());
+              $('#inputDob').attr("value", dob);
+              $('#inputStreetAddress').attr("value", faker.address.streetAddress());
+              $('#inputCityStateZip').attr("value", faker.address.city() + ", " + faker.address.stateAbbr() + " " + faker.address.zipCode());
+              $('#inputCountry').attr("value", faker.locales[faker.locale].address.default_country || "");
+              $('#inputPhone').attr("value", faker.phone.phoneNumber());
+              $('#inputUsername').attr("value", faker.internet.userName(firstName, lastName));
+              $('#inputPassword').attr("value", faker.internet.password());
+              $('#inputEmail').attr("value", faker.internet.email(firstName, lastName));
+              $('#imageAvatar').attr("src", faker.internet.avatar());
+
+            };
+
+            $('#generateName').click(function(){
+              generateName();
+            });
+            generateName();
+          });
+
+      </script>
+  </head>
+  <body>
+<div class="container">
+    <form class="form-horizontal">
+      <fieldset>
+        <br/>
+        <br/>
+        <br/>
+        
+        <h2>Email Generator</h2>
+
+        
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button id="generateName" type="button" class="btn btn-primary">Generate New</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Email:</label>
+          <div class="col-lg-10">
+            <input type="input" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+<button id="execCopy"> copy Email </button>
+<script>
+document.getElementById('execCopy').addEventListener('click', execCopy);
+function execCopy() {
+  document.querySelector("#inputEmail").select();
+  document.execCommand("copy");
+
+let SwichAudio= new Audio("https://mohammedkhaled.com/wordpress/wp-content/uploads/2022/05/click.mp3");
+        SwichAudio.play();
+      }
+</script>
+    </div>
+</html>
