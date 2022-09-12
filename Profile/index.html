@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+    <title>Mohammed Khaled Profile</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/home.png" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+<h1><script>  
+    var welcome;  
+    var date = new Date();  
+    var hour = date.getHours();  
+    var minute = date.getMinutes();  
+
+    if (minute < 10) {  
+      minute = "0" + minute;  
+    }  
+    if (hour < 12) {  
+      welcome = "Good morning";  
+    } else if (hour < 17) {  
+      welcome = "Good afternoon";  
+    } else {  
+      welcome = "Good evening";  
+    }  
+    document.write("<p>" + "<font color='red'>" + welcome + "</font>");  
+
+    </script></h1>
+<div id = "clockDisplay" clas = "clock" style="margin-bottom: 20px; margin-top: 5px;"></div>
+<script>
+	var mydate = new Date;
+	var year = mydate.getYear();
+	if(year<1000)
+	{
+		year+=1900;
+	}
+	var day = mydate.getDay();
+	var month = mydate.getMonth();
+	var daym = mydate.getDate();
+	var dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+	var monthArray = new Array("January","February","March","April","May","June","July","August","September","August","October","November","December");
+	var myClock = document.getElementById("clockDisplay") ;
+	myClock.textContent = " " + dayArray[day] + " " + daym + " " + monthArray[month] + " " + year;
+	document.getElementById('clockDisplay').style.color="white";
+</script>
+      <div class="menu-toggler">
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
+      
+
+<nav class="top-nav">
+        <ul class="nav-list">
+<li>
+            <a href="#index.html" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" onclick="swich()">About</a>
+          </li>
+          <li>
+            <a href="#education" class="nav-link" onclick="swich()">Education</a>
+          </li>
+<li>
+            <a href="#experience" class="nav-link" onclick="swich()">Experience</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" onclick="swich()">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link" onclick="swich()">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" onclick="swich()">Contact</a>
+          </li>
+      </nav>
+    <div class="landing-text">
+        <h1>Mohammed Khaled</h1>
+        <h6>I am <br/>
+Information Technology Developer.<br/>
+</h6>
+     <h6>Web and SharePoint Developer</h6>
+        <div class="social-media">
+            <ul class="nav-list">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100004184867269" target="_blank" class="icon-link">
+                    <img src="images/facebook.png" alt="" >
+                    </a>
+                    <p>Facebook</p>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mohammed-khaled-bbb8371b9" target="_blank" class="icon-link">
+                    <img src="images/linkedin.png" alt="" >
+                    </a>
+                    <p>Linkedin</p>
+                </li>
+<li>
+                    <a href="https://github.com/Mohammedkhaled96/My-Projects" target="_blank" class="icon-link">
+                    <img src="images/github.png" alt="" >
+                    </a>
+                    <p>Github</p>
+                </li>                
+</ul>
+        </div>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
+            <div class="about-image-wrapper" >
+                <img src="images/profile2.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-details" data-aos="fade-left" data-aos-delay="600">
+          <div class="about-heading">
+            <h1>About Me</h1>
+          </div>
+          <p><span>
+Mohammed Khaled Mahmoud Moustafa</span>
+<br/>
+Cairo,
+<br/>
+Egypt. 
+<br/>
+I work as a SharePoint Developer as of 2019 until now at the Red Crescent. I am a freelance Web and SharePoint Developer with different entities. 
+<br/>
+I worked as an Information Technology Developer as of 2019 until now at the Red Crescent. 
+<br/>
+I have more than 4 years of experience in using Online SharePoint and Office 365 applications like Power Automate, Power BI, Cloud applications, and all Office 365 applications.
+I am also a Web developer with HTML, CSS, JavaScript, PHP, MySQL and WordPress. 
+<br/>
+I can develop online SharePoint by using JavaScript, using workflows among Office 365 applications to automate systems and analyze data entry by Power BI. 
+I can develop websites or applications by using JavaScript, PHP. Moreover, I have good knowledge in Python to build desktop applications.
+<br/>
+I have strong knowledge in WordPress, writing and localizing technical content, and using search engine optimization (SEO).
+</p>
+<hr/>
+            <a href="Mohammed Khaled resume.pdf" target="_blank"
+                class="btn">Download Resume
+            </a>
+        </div>
+      </div>
+    </section>
+    <section class="education" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Education</h1>
+          <h6>Academic Qualifications</h6>
+        </div>
+        <div class="timeline" data-aos="fade-down" data-aos-delay="300">
+          <ul>
+            <li class="date" data-date="2015 - 2019">
+              <h1>Graduation</h1>
+              <h3>University: <span>Ain Shams</span></h3>
+              <h3>College: <span>College Of Al_Alson</span></h3>
+              <h3>Major Department: <span>Spanish Department</span></h3>
+              <h3>Minor Department: <span>English Department</span></h3>
+              <h3>Grade: <span class="grade">Good</span></h3>
+            </li>
+      </div>
+    </section>
+<section class="education" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Experience</h1>
+
+        </div>
+        <div class="timeline" data-aos="fade-down" data-aos-delay="300">
+          <ul>
+            <li class="date" data-date="July 2020 – present">
+              <h1>Information Technology Developer</h1>
+              <h3>Organization: <span>Egyptian Red Crescent</span></h3>
+              <h3>City: <span>Cairo</span></h3>
+              <h3>Country: <span>Egypt</span></h3>
+            </li>
+      </div>
+<div class="timeline" data-aos="fade-down" data-aos-delay="300">
+          <ul>
+            <li class="date" data-date="Jan 2020 – June 2020">
+              <h1>Internship</h1>
+              <h3>Organization: <span>Egyptian Red Crescent</span></h3>
+              <h3>Department: <span>Volunteering Administration Department</span></h3>
+              <h3>City: <span>Cairo</span></h3>
+              <h3>Country: <span>Egypt</span></h3>
+            </li>
+      </div>
+<div class="timeline" data-aos="fade-down" data-aos-delay="300">
+          <ul>
+            <li class="date" data-date="July 2019 – Jan 2020">
+              <h1>Internship</h1>
+              <h3>Organization: <span>Egyptian Red Crescent</span></h3>
+              <h3>Department: <span>the Public Relations Department</span></h3>
+              <h3>City: <span>Cairo</span></h3>
+              <h3>Country: <span>Egypt</span></h3>
+            </li>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Projects</h1>
+
+        </div>
+<div class="portfolio-item">
+<div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+            <img src="images/touch.png" alt="Touch Typing Game">
+          </div>
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>Touch Typing Game</h1>
+            <p>
+This is my web application   is called Touch Typing Game. 
+<br>
+This game measures your Touch Typing skill on keyboard. 
+<br>
+This game is based on HTML CSS and native javascript. 
+<br>
+important note:
+<br>
+this gamed is not responsive ,it means,<br>
+this game measures your typing speed on computer keyboare.
+</p>
+            <hr/>
+            <a href="https://mohammedkhaled.com/touch" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>Contact form</h1>
+            <p>
+This is my Contact Us form Project. i based on HTML5, CSS3, JavaScript, PHP, PHP Mailer and Google ReCaptcha. this form is responsive and secured. 
+</p>
+<hr/>
+            <a href="https://mohammedkhaled.com/contact" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+          <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+            <img src="images/contact form.png" alt="Contact Us Form">
+          </div>
+        </div>
+   
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+            <img src="images/email.png" alt="Email Generator">
+          </div>
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>Email Generator</h1>
+            <p>
+TempMail or Email generator is my web online application to generate emails to use them in different web services. this application is simple user interface and fast. I based on HTML, CSS JavaScript and ABI database on GitHub.
+            </p>
+<hr/>
+            <a href="https://mohammedkhaled.com/email" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>Data Generator</h1>
+            <p>
+Data Generator projects depends on HTML5 , Css3 , JavaScript and API  JSON database on Github. This application helps you to generate data profile to use it in any website or application as you need take specific service or you does not want to log in any website by your real profile to save your privacy. And also you do want to renew a supscripption in an application, data generater helps you to upgrate your triles in your websites.
+            </p>
+<hr/>
+            <a href="https://mohammedkhaled.com/datagenerater" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+          <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+            <img src="images/data.png" alt="Data Generator">
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+            <img src="images/waifai.png" alt="Wi-Fi">
+          </div>
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
+            <h1>Wi-Fi QR Code Generator Application</h1>
+            <p>
+Wi-Fi QR code generater application is online and based on htnl5 css3 andd JavaScript. Our project helps the user to generate QR code for your wireless network to protect your Wi-Fi password from publishing among network users. This application is safe because the user data is not submitted.
+</p>
+<hr/>
+            <a href="https://mohammedkhaled.com/WQR" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>IT Request Automation</h1>
+            <p>
+this project was in January 2021. This project depends on Microsoft applications as SharePoint, power automation and Microsoft form. IT requests automation is a cycle to apply requests electronically without using paper documents. It request automation will play a vital role to make connection among users in or out organization easier and faster.
+</p>
+<hr/>
+            <a href="https://mohammedkhaled.com/standerd" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+          <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+            <img src="images/it request automation.png" alt="Automation">
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+            <img src="images/one.png" alt="OneDrive">
+          </div>
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
+            <h1>OneDrive Automation</h1>
+            <p>
+<br />
+<h2>Save Office 365 email attachments to OneDrive for Business.</h2>
+<br />
+Now you can have easy access to your Office 365 email attachments from OneDrive for Business. All attachments sent to your Office 365 inbox will be saved in a folder called Email attachments from Power Automate.
+</p>
+<hr/>
+            <a href="https://youtu.be/tpdwqUi2Tdc" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>
+        </div>
+    <div class="portfolio-item">
+          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+            <h1>Note Taker Application</h1>
+            <p>
+<br />
+<h2>Nota</h2>
+<br />
+Note taker application is web application and it is called to nota according to Egyptians. Note taker application helps you to store your notes on your
+browser and you can export your notes to excel or pdf. This application is based on html. css and JavaScript. It is depended on local storage to save your
+note with its date and time and you can also edit or delete your note to save it on your browser or export it to excel or pdf.
+</p>
+<hr/>
+            <a href="https://mohammedkhaled.com/note" target="_blank" class="cta" onclick="play()"> View Project</a>
+          </div>    
+      <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+            <img src="images/note.png" alt="Note Taker Application">
+          </div>
+        </div>
+       </section>
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Skills</h1>
+          <h6>I love learnining new technologies and use them to build better and
+          scalable products.<br/>Here are some technologies that i have worked on
+          recently.</h6>
+        </div>
+        <div class="my-skills">
+          <div class="skill" data-aos="fade-in" data-aos-delay="600">
+            <div class="icon-container">
+              <img src="./images/html.svg" />
+            </div>
+            <h1>HTML/HTML5</h1>
+          </div>
+          <div class="skill" data-aos="fade-in" data-aos-delay="900">
+            <div class="icon-container">
+              <img src="./images/css.svg" />
+            </div>
+            <h1>CSS/CSS3</h1>
+          </div>
+          <div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/js.svg" />
+            </div>
+            <h1>JavaScript/ecmascript-6</h1>
+          </div>
+          <div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/php.svg" />
+            </div>
+            <h1>PHP/MYSQL</h1>
+          </div>
+<div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/wordpress-brands.svg" />
+            </div>
+            <h1>WordPress</h1>
+          </div>
+<div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/github-alt.svg" />
+            </div>
+            <h1>Git/Github</h1>
+          </div>
+<div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/python.svg" />
+            </div>
+            <h1>python</h1>
+          </div>
+        <div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/microsoft.svg" />
+            </div>
+            <h1>sharepoint/office365</h1>
+          </div>
+                </div>
+<div class="skill" data-aos="fade-in" data-aos-delay="1200">
+            <div class="icon-container">
+          <img src="./images/safari.svg" />
+            </div>
+            <h1>search skills</h1>
+          </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Contact</h1>
+<h3>Thank you for contacting us</h3>
+
+<p>
+Thanks again for looking over our website and considering us for help with your project. Please take a moment and fill out as much of the form below as you can, and we will quickly respond to your inquiry.
+				</p>
+        </div>
+         
+    
+    <form action="mail_handler.php" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" name="name">
+      <p><?php if(isset($name_error)) echo $name_error; ?></p>
+      <label for="subject">Subject:</label><br>
+      <input type="text" name="subject">
+      <p><?php if(isset($subject_error)) echo $subject_error; ?></p>
+      <label for="email">Email:</label><br>
+      <input type="text" name="email">
+      <p><?php if(isset($email_error)) echo $email_error; ?></p>
+      <label for="message">Message:</label><br>
+      <textarea name="message"></textarea>
+      <p><?php if(isset($message_error)) echo $message_error; ?></p>
+      <input type="submit" name="submit" value="Submit">
+</form>
+<hr/>
+        <div class="section-heading">
+
+<h3>Contact us on WhatsApp</h3>
+<p>
+Thanks again for looking over our website and contacting us on WhatsApp quickly. Please take a moment and fill out as much of the WhatsApp form below as you can, and we will quickly respond to your WhatsApp message.
+				</p>
+        </div>
+
+        <div class="col col-sm-8 col-md-5 col-lg-4 mx-auto px-0 mb-5">
+            <form accept-charset="utf-8">
+<div class="form-group mb-2">
+                    <label>Your Name</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text rounded-0 fa fa-pencil-square-o"></span>
+                        </div>
+                        <input id="name" type="text" class="form-control rounded-0" required>
+                    </div>
+                
+                </div>
+
+                <div class="form-group mb-2">
+                    <label>Your Message</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text rounded-0 fa fa-pencil-square-o"></span>
+                        </div>
+                        <input id="message" type="text" class="form-control rounded-0" required>
+                    </div>
+                
+                </div>
+                <div class="form-group mb-2">
+                    <label>Send</label>
+                    <div class="col px-0">
+                        <button id="by-link" type="button" class="btn btn-info">Link</button>
+                        <button id="by-popup" type="button" class="btn btn-info">Send Message</button>
+<style>
+#by-link{
+display: none;
+}
+</style>
+                     </div>
+                </div>
+            </form>
+</div>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let phone = +201141226652
+        let name = document.getElementById('name')        
+        let message = document.getElementById('message')        
+
+        // buttons
+        let linkHandler = document.getElementById('by-link')
+        let popUpHandler = document.getElementById('by-popup')        
+
+        // font: https://detectmobilebrowsers.com
+        let isMobile = (function(a) {
+            if ( /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)) ) {
+                return true
+            } else {
+                return false
+            }
+        })(navigator.userAgent || navigator.vendor || window.opera)
+
+
+        const makeLink = function(mode) {        
+
+            let mount = function() {
+                if ( isMobile ) {
+                    let target = `whatsapp://send?`
+                    if ( !!phone && phone !== '' ) {
+                        target += `phone=${encodeURIComponent(phone.value)}&`
+                    }
+if ( !!name && name.value !== '' ) {
+                        target += `text=${encodeURIComponent(name.value)}`
+                    }
+  if ( !!message && message.value !== '' ) {
+                        target += ` , message is ${encodeURIComponent(message.value)}`
+                    }
+                    return target
+                } else {
+                    let target = `https://api.whatsapp.com/send?`
+                    if ( !!phone && phone !== '' ) {
+                        target += `phone=${encodeURIComponent(phone)}&`
+                    }
+if ( !!name && name.value !== '' ) {
+                        target += `text=${encodeURIComponent(name.value)}`
+                    }
+                    if ( !!message && message.value !== '' ) {
+                        target += ` , message is ${encodeURIComponent(message.value)}`
+                    }
+                    return target
+                }
+            
+            }        
+
+            let openLink = function() {
+                let a = document.createElement('a')
+                a.target = '_blank'
+                a.href = mount()
+                a.click()
+                console.log('By Link')
+            }        
+
+            let openPopUp = function() {
+                let h = 650,
+                    w = 550,
+                    l = Math.floor(((screen.availWidth || 1024) - w) / 2),
+                    t = Math.floor(((screen.availHeight || 700) - h) / 2)
+                // open popup
+                let options = `height=600,width=550,top=${t},left=${l},location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=0`
+                let popup = window.open(mount(), 'self', options)
+                if ( popup ) {
+                    popup.focus()
+                }
+                console.log('By PopUp')
+            }
+            
+            switch (mode) {
+                case 'link':
+                    openLink()
+                break
+                case 'popup':
+                    openPopUp()
+                break
+            }
+        } 
+
+        // events handler(s)
+        linkHandler.addEventListener('click', function(e) {
+            makeLink('link')
+        }, false)
+        popUpHandler.addEventListener('click', function(e) {
+            makeLink('popup')
+        }, false)
+    </script>
+    
+
+        <div class="bottomMessage">
+        <h4>
+you will find me here too.
+          <br />
+          <span>Mail: <span class="bottomMessageColor">mohammed.khaled.mahmoud1996@gmail.com</span></span>
+          |
+          <span>Mobile .No: <span class="bottomMessageColor">+201141226652</span></span>
+          <br />Thank you.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <footer class="copyright">
+      <div class="up" id="up">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+        <p>&copy; Mohammed Khaled</p>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="button.js"></script>
+<script src="top.js"></script>
+    <script src="main.js"></script>
+
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'},
+				'google_translate_element'
+			);
+		}
+	</script>
+	
+	<script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+	</script>
+  </body>
+</html>
