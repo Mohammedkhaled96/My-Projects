@@ -1,0 +1,14 @@
+# Binaries and archives don't belong in source control
+*.exe
+*.msi
+*.rar
+*.zip
+
+# Secrets
+.env
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
